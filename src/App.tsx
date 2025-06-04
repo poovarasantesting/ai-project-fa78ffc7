@@ -1,15 +1,14 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Toaster } from 'sonner';
-import RegisterPage from './pages/Register';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PostsPage from "./pages/PostsPage";
+import { Toaster } from "@/components/ui/toaster";
 
 function App() {
   return (
     <BrowserRouter>
-      <Toaster position="top-center" />
       <Routes>
-        <Route path="/" element={<RegisterPage />} />
-        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/" element={<PostsPage />} />
       </Routes>
+      <Toaster />
     </BrowserRouter>
   );
 }
